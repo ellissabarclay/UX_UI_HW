@@ -1,60 +1,354 @@
-/* Code nav bar CSS*/
+/* Fonts! */
 
-.navigation{
-    width: 100%; 
-    height: 80px;
-    background-color: green;
+@font-face{
+  font-family: 'charter';
+  src: url(fonts/charter_regular-webfont.ttf) format('truetype');
+  src: url(fonts/charter_regular-webfont.woff) format('woff');
 }
 
-.navbar{
-    vertical-align: top;
-    margin-right: auto;
-    margin-top: 15px;    /* if you want it vertically middle of the navbar. */
+@font-face{
+  font-family: 'charter-italic';
+  src: url(fonts/charter_italic-webfont.ttf) format('truetype');
+  src: url(fonts/charter_italic-webfont.woff) format('woff');
 }
 
-li {
-    display: inline-block;
-    vertical-align: top;
-
-}
-
-.logo{
-    width: 50px;
-    height: 50px;
-}
-
-ul{
-    width: 50%;
-    margin-left: auto;
-    list-style-type: none;
+@font-face{
+  font-family: 'charter-bold'; 
+  src: url(fonts/charter_bold-webfont.ttf) format('truetype');
+  src: url(fonts/charter_bold-webfont.woff) format('woff');
 }
 
 
-.logo{
+
+/*--------------------------------Mobile General-----------------------------------*/
+
+.container{
+	background-color: white;
+	margin: 0;
+	padding: 0; 
+}
+
+h1{
+  padding-top: 0.3em;
+	color: white;
+  font-family: "charter-bold";
+  font-size: 3em;
+  text-align: center;
+}
+
+h2{
+  color: #ff8b38;
+  font-family: "charter-bold";
+  text-align: center;
+  font-size: 2em;
+  margin: 1em;
+}
+
+h3{
+  color: white;
+  font-family: "charter-bold";
+  margin: 1em 1em 1em 2em;
+  font-size: 1.2em;
+
+}
+
+p{
+	color: black;
+  font-family: "charter";
+  margin-left: 2.5em;
+  margin-right: 2.5em;
+  margin-bottom: 2em;
+  line-height: 1.5em;
+}
+
+a{
+  font-family: "charter";
+  color: #94dbd2;
+  text-decoration: none;
+}
+
+li{
+  color: white;
+  list-style-type: circle;
+  color: white;
+  font-family: "charter";
+
+
+}
+
+#logo img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  width: 7%;
+}
+
+.icon a{
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #c02f1a;
+  margin: 0;
+  border-radius: 5px;
+}
+
+/*---------------------------------------Home Stuff---------------------------------------*/
+
+.cover{
+  background-color: white;
+}
+
+.cover p{
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+#contact{
+  margin: 3em 3em 2em 3em;
+  text-align: center;
+}
+
+
+/*------------------------------Crazy-Navigation nonsense------------------------*/
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
     text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: rgba(255, 0, 0, 0.8);;
+    font-family: futura;
 }
 
-/*Code hero image CSS*/
-
-section.heroImg{
-    height: 600px;
-    padding: 25px;
+.topnav a:hover {
+    background-color: #ddd;
+    color: blue;
 }
 
-.content{
-    width: 500px;
-    margin: 0 auto;
+.active {
+    background-color: #4CAF50;
+    color: blue;
 }
 
-/*Code footer  CSS*/
+.topnav .icon {
+    display: none;
+}
 
+/*-----------------------------------------------------------------------*/
+
+@media screen and (max-width: 600px) {
+  .topnav a{display: none;}
+
+  .topnav a.icon {
+    float: right;
+    display: block;
+    margin: 1em 1em 1em 1em;
+    background-color: #c02f1a;
+    border-radius: 5px;
+  }
+
+  #log-in{
+    display: none;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: absolute;
+  }
+
+  .topnav.responsive a.icon {
+    position: relative;
+    float: none;
+    display: block;
+    background-color: #c02f1a;
+    clear: both;
+    width: 100%;
+
+
+  }
+
+  .topnav.responsive a {
+    position: relative;
+    display: block;
+    width: 100%;
+    z-index: 20;
+
+
+  }
+}
+
+/*-------------------Accordian Menu---------------------------*/
+.accordion {
+    background-color:transparent;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    border:none;
+    transition: 0.4s;
+    font-size: 1em;
+    font-family: futura;
+    margin: 0 0 1em 0;
+}
+
+.panel {
+    padding: 0 0 2em 2.5em;
+    background-color: transparent;
+    display: none;
+    overflow: hidden;
+}
+
+.panel a{
+  font-family: futura;
+  color: white;
+}
+
+.panel li{
+  list-style-type: none;
+}
+
+.accordion:after {
+    content: ' +'; 
+    font-size: 1em;
+    color: white;
+    float: none;
+    text-decoration: none;
+
+}
+
+.active:after {
+    content: " --";
+    } 
+
+/*---------------------------Footer-----------------------------------------*/
 footer{
-    background-color: #373738;
-    padding: 20px;
+    background-color:black;
+    padding: 3em 1em 1em 1em;
 }
 
-footer ul{
-    display: inline-block;
-    vertical-align: top;
-    padding: 20px;
+#bottom li{
+  text-align: center;
+  margin-bottom: .5em;
+  list-style-type: none;
 }
+
+#bottom a{
+  color: white;
+}
+
+#socials{
+  text-align: center;
+  margin: 3em 4em 3em 4em;
+}
+
+#socials li{
+  color: white;
+  display: inline;
+  font-size: 2em;
+  padding-left: 0.2em;
+}
+
+#socials i{
+  color: white;
+}
+
+footer p{
+  text-align: center;
+  margin: 1em 1em 1em 1em;
+}
+
+/*--------------Desktop Header--------------------------------*/
+@media screen and (min-width: 1000px){
+
+#logo{
+  display: block;
+  margin: 0 auto 0 auto;
+  float: none;
+}
+
+  .topnav a{
+    float: none;
+    display: inline-block;
+    background-color: transparent;
+    font-size: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+  }
+
+
+  .topnav{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+
+
+    .topnav a:first-of-type{
+    display: inline;
+  }
+
+
+
+/*--------------Desktop General--------------------------------*/
+p{
+  margin: 0 8em 2em 8em;
+}
+
+h3{
+  color: white;
+  font-family: "charter-bold";
+  margin: 1em 6.5em 1em 6.5em;
+  font-size: 1.2em;
+
+}
+
+
+.cover{
+  padding-left: 0;
+  padding-right:0;
+  padding-top: 3em;
+}
+
+
+ 
+/*--------------Desktop home--------------------------------*/
+ #hand-icon{
+  display: none;
+ }
+ 
+ #home{
+  background: url()bottom center no-repeat;
+  background-color: white;
+ }
+
+#home p{
+  margin: 3em 3em 3em 3em;
+  text-align: left;
+ }
+
+ #home h2{
+  margin: 2em 0 1em 0em;
+ }
+
+ #self img{
+   float: left;
+   height: auto;
+   width: 50%;
+ }
+
+ #blurb{
+   float: right;
+   width: 50%;
+   padding: 7% 2% 7% 2%;
+ }
